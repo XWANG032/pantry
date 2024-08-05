@@ -100,30 +100,25 @@ export default function Home() {
           </Stack>
         </Box>
       </Modal>
-      {/* <Button variant="contained" onClick={() =>{
-        handleOpen()
-      }}>
-        Add New Item
-      </Button> */}
-      {/* <Box width="100%" height="5vh" justifyContent="center" alignItems="center">
-        <TextField>Enter</TextField>
-      </Box> */}
+      <Box width="55vw" bgcolor = "violet" textAlign = "center">
+        <Typography variant = "h2">What to Eat??</Typography>
+      </Box>
       <Box border='1px solid #333'>
         <Box
         width = "800px"
         height = "auto"
-        bgcolor = "#ADD8E6"
+        bgcolor = "#A45EE5"
         display="flex"
         flexDirection="column"
         alignItems="center" 
         justifyContent="center">
-          <Typography variant="h2" color="#333">
+          <Typography variant="h2">
             Current Inventory
           </Typography>
           <TextField variant="outlined" fullWidth placeholder = "Search..."value={search} onChange = {handleSearch} ></TextField>
         </Box>
-        <Box bgcolor = "#ADD8E6" width = "800px" display="flex" justifyContent="center">
-          <Button variant="contained" onClick={() =>{
+        <Box bgcolor ="#A45EE5" width = "800px" display="flex" justifyContent="center">
+          <Button variant="contained" sx={{backgroundColor:"#E30B5C", "&:hover":{backgroundColor: "#DA70D6"}, }} onClick={() =>{
             handleOpen()
           }}>
             Add New Item
@@ -142,19 +137,19 @@ export default function Home() {
           bgColor="#f0f0f0"
           padding={2}
           >
-            <Typography variant="h3" color="#333" textAlign="center">
+            <Typography variant="h3" textAlign="center">
               {name.charAt(0).toUpperCase() + name.slice(1)}
             </Typography>
-            <Typography variant="h3" color="#333" textAlign="center">
+            <Typography variant="h3" textAlign="center">
               {quantity}
             </Typography>
-            <Button variant="contained" sx={{ width: '75%' }} onClick={() =>{
+            <Button variant="contained" sx={{ width: '75%', boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)", backgroundColor: "#FF033E", "&:hover":{backgroundColor: "#A01641"}}} onClick={() =>{
               removeItem(name)
             }}
             >
               Remove
             </Button>
-            <Button variant="contained" sx={{ width: '75%' }} onClick={() =>{
+            <Button variant="contained" sx={{ width: '75%', boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)", backgroundColor: "#FF1D8D", "&:hover":{backgroundColor: "#FFB6C1"}}} onClick={() =>{
               incrementItem(name)
             }}>
               Add
